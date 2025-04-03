@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <title>Message Entry</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_back"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="message-info-container">
+        <div class="message-info-card">
+          <p class="message-text">"<%= message.text %>"</p>
+          <p class="message-user">- <%= message.user %></p>
+          <p>Date Submitted: <%=message.added%></p>
+        </div>
+      </div>
+      <a href="/" class="back-button"
+        ><span class="material-symbols-outlined"> arrow_back </span> Go Back to
+        the Message Board</a
+      >
+    </div>
+  </body>
+</html>

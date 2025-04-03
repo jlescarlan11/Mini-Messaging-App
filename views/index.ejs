@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <title>Homepage</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <div class="welcome-container">
+      <p class="welcome-remarks">
+        Welcome to the Global Freedom Wall – a place where you’re invited to
+        share your thoughts and ideas openly.
+      </p>
+      <a href="/new"><button class="entry-btn">Add Entry</button></a>
+    </div>
+    <div class="message-container">
+      <% for (let i = messages.length - 1; i >= 0; i--) { %>
+      <div class="message-card">
+        <p class="message-text">"<%= messages[i].text %>"</p>
+        <p class="message-user">- <%= messages[i].user %></p>
+        <p><%= messages[i].added %></p>
+        <a href="/<%= messages[i].id %>"><button>View Entry</button></a>
+      </div>
+      <% } %>
+    </div>
+  </body>
+</html>
