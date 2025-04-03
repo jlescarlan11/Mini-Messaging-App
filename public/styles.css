@@ -125,6 +125,7 @@ h1 {
 input,
 textarea {
   padding: 1rem;
+  font-size: 1rem;
   background-color: transparent;
   color: var(--text-color);
   border: none;
