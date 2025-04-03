@@ -126,6 +126,7 @@ input,
 textarea {
   padding: 1rem;
   background-color: transparent;
+  color: var(--text-color);
   border: none;
   border: 1px solid var(--secondary-color);
 }
