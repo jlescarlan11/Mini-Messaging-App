@@ -2,20 +2,7 @@ const { Router } = require("express");
 
 const indexRouter = Router();
 
-const messages = [
-  {
-    id: 0,
-    text: "Hi there!",
-    user: "Amando",
-    added: new Date(),
-  },
-  {
-    id: 1,
-    text: "Hello World!",
-    user: "Charles",
-    added: new Date(),
-  },
-];
+const messages = [];
 
 indexRouter.get("/", (req, res) => {
   res.render("index", { title: "Freedom Wall", messages: messages });
@@ -32,8 +19,16 @@ indexRouter.post("/new", (req, res) => {
     id: messages.length, // or use uuid as discussed earlier
     text: messageText,
     user: messageUser,
-    added: new Date(),
+    added: new Date().toLocaleString("en-US", {
+      month: "2-digit",
+      day: "2-digit",
+      year: "numeric",
+      hour: "numeric",
+      minute: "2-digit",
+      hour12: true,
+    }),
   };
+
   messages.push(newMessage);
   res.redirect("/");
 });

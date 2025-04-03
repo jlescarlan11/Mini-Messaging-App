@@ -2,6 +2,10 @@
   <head>
     <title>Homepage</title>
     <link rel="stylesheet" href="/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=visibility"
+    />
   </head>
   <body>
     <h1><%= title %></h1>
@@ -15,10 +19,18 @@
     <div class="message-container">
       <% for (let i = messages.length - 1; i >= 0; i--) { %>
       <div class="message-card">
-        <p class="message-text">"<%= messages[i].text %>"</p>
-        <p class="message-user">- <%= messages[i].user %></p>
-        <p><%= messages[i].added %></p>
-        <a href="/<%= messages[i].id %>"><button>View Entry</button></a>
+        <div class="message-card-header">
+          <p class="message-user"><%= messages[i].user %></p>
+          <p class="message-date">
+            Entry Submitted at: <%= messages[i].added %>
+          </p>
+          <a href="/<%= messages[i].id %>"
+            ><span class="material-symbols-outlined"> visibility </span></a
+          >
+        </div>
+        <div class="message-card-body">
+          <p class="message-text">"<%= messages[i].text %>"</p>
+        </div>
       </div>
       <% } %>
     </div>
