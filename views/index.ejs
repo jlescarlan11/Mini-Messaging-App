@@ -21,9 +21,6 @@
       <div class="message-card">
         <div class="message-card-header">
           <p class="message-user"><%= messages[i].user %></p>
-          <p class="message-date">
-            Entry Submitted at: <%= messages[i].added %>
-          </p>
           <a href="/<%= messages[i].id %>"
             ><span class="material-symbols-outlined"> visibility </span></a
           >
@@ -31,6 +28,7 @@
         <div class="message-card-body">
           <p class="message-text">"<%= messages[i].text %>"</p>
         </div>
+        <p class="message-date">Entry Submitted at: <%= messages[i].added %></p>
       </div>
       <% } %>
     </div>

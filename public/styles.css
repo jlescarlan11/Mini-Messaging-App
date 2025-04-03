@@ -77,7 +77,6 @@ h1 {
 .message-text {
   margin-bottom: 0.5rem;
   font-size: 1rem;
-  min-height: 5rem;
 }
 
 .message-info-text {
@@ -93,6 +92,7 @@ h1 {
 
 .message-date {
   color: var(--secondary-color);
+  font-size: 0.6rem;
 }
 
 .message-card-header {

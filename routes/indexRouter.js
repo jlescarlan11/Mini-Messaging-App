@@ -19,14 +19,16 @@ indexRouter.post("/new", (req, res) => {
     id: messages.length, // or use uuid as discussed earlier
     text: messageText,
     user: messageUser,
-    added: new Date().toLocaleString("en-US", {
-      month: "2-digit",
-      day: "2-digit",
-      year: "numeric",
-      hour: "numeric",
-      minute: "2-digit",
-      hour12: true,
-    }),
+    added:
+      new Date().toLocaleString("en-US", {
+        month: "2-digit",
+        day: "2-digit",
+        year: "numeric",
+        hour: "numeric",
+        minute: "2-digit",
+        hour12: true,
+        timeZone: "UTC", // Ensures the time is based on UTC
+      }) + " (UTC)", // Append the text "(UTC)" to the date string
   };
 
   messages.push(newMessage);
