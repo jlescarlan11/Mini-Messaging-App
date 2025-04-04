@@ -3,7 +3,7 @@
 :root {
   --primary-color: rgb(0, 0, 0);
   --secondary-color: rgb(62, 54, 54);
-  --accent-color: rgb(215, 35, 35);
+  --accent-color: rgb(95, 133, 219);
   --text-color: rgb(245, 237, 237);
 }
 
@@ -40,7 +40,7 @@ button {
   color: var(--text-color);
   padding: 1rem;
   border: none;
-  border: 1px solid transparent;
+  border: 1px solid var(--secondary-color);
   border-radius: 0.5rem;
   cursor: pointer;
   margin-bottom: 1rem;
@@ -48,9 +48,18 @@ button {
 }
 
 button:hover {
-  background-color: var(--primary-color); /* Darker Green */
   transform: scale(0.99);
-  border: 1px solid var(--text-color);
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
 }
 
 .welcome-remarks {
@@ -189,8 +198,18 @@ textarea {
 .back-button:hover,
 .view-button:hover {
   color: var(--accent-color);
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
 .view-button {
   transition: all 0.3s ease-in-out;
 }
