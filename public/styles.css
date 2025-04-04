@@ -174,3 +174,17 @@ textarea {
 a {
   color: var(--text-color);
 }
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 100%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.footer-container {
+  border-top: 1px solid var(--secondary-color);
+  padding: 1rem;
+}
