@@ -34,7 +34,9 @@
             >
           </div>
           <div class="message-card-body">
-            <p class="message-text">"<%= messages[i].text %>"</p>
+            <p class="message-text">
+              "<%= truncateText(messages[i].text, 70) %>"
+            </p>
           </div>
           <p class="message-date">
             Entry Submitted at: <%= messages[i].added %>

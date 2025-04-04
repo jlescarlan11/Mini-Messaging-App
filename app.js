@@ -17,6 +17,16 @@ app.set("view engine", "ejs");
 //   res.render("new");
 // });
 
+// Define the truncateText function
+app.locals.truncateText = function (text, maxLength) {
+  if (typeof text !== "string") return text;
+  text = text.trim();
+  if (text.length > maxLength) {
+    text.substring(0, maxLength - 3).trim() + "...";
+  }
+  return text;
+};
+
 app.use("/", indexRouter);
 
 const PORT = process.env.PORT || 3000;
