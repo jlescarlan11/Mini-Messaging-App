@@ -43,6 +43,11 @@ button {
   border-radius: 0.5rem;
 }
 
+button:focus {
+  outline: none;
+  box-shadow: 0 0 0 1px var(--text-color);
+}
+
 .welcome-remarks {
   margin-bottom: 1rem;
 }
@@ -147,6 +152,7 @@ textarea {
   align-items: center;
   justify-content: flex-start;
   text-decoration: none;
+  margin-bottom: 4rem;
 }
 
 .message-info-container {
@@ -168,8 +174,8 @@ textarea {
 }
 
 .container {
-  min-height: 100dvh;
   display: flex;
+  height: 100%;
   flex-direction: column;
   justify-content: center;
 }
