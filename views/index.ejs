@@ -29,13 +29,13 @@
         <div class="message-card">
           <div class="message-card-header">
             <p class="message-user"><%= messages[i].user %></p>
-            <a href="/<%= messages[i].id %>" class="view-button"
-              ><span class="material-symbols-outlined"> visibility </span></a
-            >
+            <a href="/<%= messages[i].id %>" class="view-button">
+              <span class="material-symbols-outlined"> visibility </span>
+            </a>
           </div>
           <div class="message-card-body">
             <p class="message-text">
-              "<%= truncateText(messages[i].text, 70) %>"
+              "<%= truncateText(messages[i].text, 100) %>"
             </p>
           </div>
           <p class="message-date">
