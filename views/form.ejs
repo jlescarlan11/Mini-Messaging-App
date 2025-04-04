@@ -8,35 +8,37 @@
     />
   </head>
   <body>
-    <h1>Write your thoughts!</h1>
-    <form method="POST" id="form-container" action="/new">
-      <label for="messageUser">Enter your Alias:</label>
-      <input
-        id="messageUser"
-        name="messageUser"
-        type="text"
-        required
-        aria-required="true"
-        placeholder="Enter your Alias..."
-      />
-      <label for="messageText">Enter your Entry:</label>
-      <textarea
-        id="messageText"
-        name="messageText"
-        type="text"
-        placeholder="Enter your Entry..."
-        required
-        aria-required="true"
-        cols="33"
-        rows="10"
-        style="resize: vertical"
-      ></textarea>
-      <button type="submit">Submit</button>
-    </form>
-    <a href="/" class="back-button"
-      ><span class="material-symbols-outlined"> arrow_back </span> Go Back to
-      the Message Board</a
-    >
+    <main>
+      <h1>Write your thoughts!</h1>
+      <form method="POST" id="form-container" action="/new">
+        <label for="messageUser">Enter your Alias:</label>
+        <input
+          id="messageUser"
+          name="messageUser"
+          type="text"
+          required
+          aria-required="true"
+          placeholder="Enter your Alias..."
+        />
+        <label for="messageText">Enter your Entry:</label>
+        <textarea
+          id="messageText"
+          name="messageText"
+          type="text"
+          placeholder="Enter your Entry..."
+          required
+          aria-required="true"
+          cols="33"
+          rows="10"
+          style="resize: vertical"
+        ></textarea>
+        <button type="submit">Submit</button>
+      </form>
+      <a href="/" class="back-button"
+        ><span class="material-symbols-outlined"> arrow_back </span> Go Back to
+        the Message Board</a
+      >
+    </main>
+    <%- include('footer') %>
   </body>
-  <%- include('footer') %>
 </html>

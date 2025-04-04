@@ -8,30 +8,34 @@
     />
   </head>
   <body>
-    <h1><%= title %></h1>
-    <div class="welcome-container">
-      <p class="welcome-remarks">
-        Welcome to the Global Freedom Wall – a place where you’re invited to
-        share your thoughts and ideas openly.
-      </p>
-      <a href="/new"><button class="entry-btn">Add Entry</button></a>
-    </div>
-    <div class="message-container">
-      <% for (let i = messages.length - 1; i >= 0; i--) { %>
-      <div class="message-card">
-        <div class="message-card-header">
-          <p class="message-user"><%= messages[i].user %></p>
-          <a href="/<%= messages[i].id %>"
-            ><span class="material-symbols-outlined"> visibility </span></a
-          >
-        </div>
-        <div class="message-card-body">
-          <p class="message-text">"<%= messages[i].text %>"</p>
-        </div>
-        <p class="message-date">Entry Submitted at: <%= messages[i].added %></p>
+    <main>
+      <h1><%= title %></h1>
+      <div class="welcome-container">
+        <p class="welcome-remarks">
+          Welcome to the Global Freedom Wall – a place where you’re invited to
+          share your thoughts and ideas openly.
+        </p>
+        <a href="/new"><button class="entry-btn">Add Entry</button></a>
       </div>
-      <% } %>
-    </div>
+      <div class="message-container">
+        <% for (let i = messages.length - 1; i >= 0; i--) { %>
+        <div class="message-card">
+          <div class="message-card-header">
+            <p class="message-user"><%= messages[i].user %></p>
+            <a href="/<%= messages[i].id %>"
+              ><span class="material-symbols-outlined"> visibility </span></a
+            >
+          </div>
+          <div class="message-card-body">
+            <p class="message-text">"<%= messages[i].text %>"</p>
+          </div>
+          <p class="message-date">
+            Entry Submitted at: <%= messages[i].added %>
+          </p>
+        </div>
+        <% } %>
+      </div>
+    </main>
+    <%- include('footer') %>
   </body>
-  <%- include('footer') %>
 </html>
