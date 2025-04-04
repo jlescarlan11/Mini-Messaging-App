@@ -40,16 +40,16 @@ button {
   color: var(--text-color);
   padding: 1rem;
   border: none;
-  border: 1px solid transparent;
+  border: 1px solid var(--primary-color);
   border-radius: 0.5rem;
   cursor: pointer;
+  margin-bottom: 1rem;
   transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out,
     border 0.3s ease-in-out;
 }
 
 button:focus {
   outline: none;
-  box-shadow: 0 0 0 1px var(--text-color);
 }
 
 button:hover {
@@ -166,10 +166,19 @@ textarea {
 
 .back-button {
   display: flex;
-  align-items: center;
-  justify-content: flex-start;
+  width: fit-content;
   text-decoration: none;
   margin-bottom: 4rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.back-button:hover,
+.view-button:hover {
+  color: var(--accent-color);
+}
+
+.view-button {
+  transition: all 0.3s ease-in-out;
 }
 
 .message-info-container {
