@@ -6,6 +6,10 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=visibility"
     />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=add"
+    />
   </head>
   <body>
     <main>
@@ -15,10 +19,11 @@
           Welcome to the Global Freedom Wall – a place where you’re invited to
           share your thoughts and ideas openly.
         </h4>
-        <a href="/new">
-          <button class="entry-btn" autofocus>Add Entry</button>
-        </a>
       </div>
+      <a href="/new" class="add-entry"
+        ><span class="material-symbols-outlined add-icon"> add </span> Add Entry
+      </a>
+
       <div class="message-container">
         <% for (let i = messages.length - 1; i >= 0; i--) { %>
         <div class="message-card">

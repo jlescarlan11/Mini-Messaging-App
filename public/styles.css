@@ -59,15 +59,17 @@ button:hover {
 
 h1 {
   text-align: center;
-  padding: 1rem;
-  margin: 0;
+  margin-bottom: 1rem;
   font-size: 4rem;
 }
 
 .welcome-container {
   text-align: center;
   font-size: 1rem;
-  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 1.5rem;
   border-bottom: 1px solid var(--secondary-color);
 }
@@ -162,11 +164,28 @@ textarea {
 .back-button {
   display: flex;
   width: fit-content;
+  gap: 0.5rem;
   text-decoration: none;
   margin-bottom: 4rem;
   transition: all 0.3s ease-in-out;
 }
 
+.add-entry {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  text-decoration: none;
+  margin-bottom: 1rem;
+  gap: 0.5rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.add-icon {
+  border: 1px solid var(--secondary-color);
+  border-radius: 0.2rem;
+}
+
+.add-entry:hover,
 .back-button:hover,
 .view-button:hover {
   color: var(--accent-color);
