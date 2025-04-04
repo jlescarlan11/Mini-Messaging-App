@@ -47,10 +47,6 @@ button {
   transition: all 0.3s ease-in-out;
 }
 
-button:focus {
-  outline: none;
-}
-
 button:hover {
   background-color: var(--primary-color); /* Darker Green */
   transform: scale(0.99);
