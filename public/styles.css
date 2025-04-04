@@ -53,7 +53,7 @@ button:focus {
 
 button:hover {
   background-color: var(--primary-color); /* Darker Green */
-  transform: scale(0.98);
+  transform: scale(0.99);
   border: 1px solid var(--text-color);
 }
 
@@ -204,10 +204,6 @@ textarea {
   flex-direction: column;
   justify-content: center;
 }
-
-/* .entry-btn {
-  margin: auto;
-} */
 
 .form-header {
   margin-bottom: 4rem;
