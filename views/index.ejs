@@ -48,8 +48,7 @@
       </details>
 
       <div class="message-container">
-        <% if (locals.messages) {%> <%
-        messages.slice().reverse().forEach(message => {%>
+        <% if (locals.messages) {%> <% messages.forEach(message => {%>
         <div class="message-card">
           <div class="message-card-header">
             <span class="message-user">«<%= message.messageUser %>»</span>

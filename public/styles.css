@@ -22,12 +22,13 @@ body {
   color: #e8e5d6;
   font-family: "Courier New", monospace;
   min-height: 100vh;
+  /* overflow-x: hidden; */
 }
 
 main {
-  max-width: 800px;
   margin: 0 auto;
   padding: 2rem;
+  min-width: 80%;
   animation: fadeIn 1s ease-in;
   flex: 1;
 }
@@ -58,6 +59,10 @@ h1 {
   border-radius: 4px;
   position: relative;
   overflow: hidden;
+}
+
+.welcome-remarks {
+  text-align: center;
 }
 
 .welcome-container::before {
@@ -106,28 +111,9 @@ h1 {
   box-shadow: 0 4px 12px var(--shadow-color);
 }
 
-.message-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(1fr));
-  gap: 1.5rem;
-  margin-top: 2rem;
-}
-
 .message-card:hover {
   transform: translateY(-5px) rotateX(5deg) rotateY(-2deg);
   box-shadow: 4px 4px 12px var(--shadow-color);
-}
-
-.message-card {
-  background: rgba(30, 30, 30, 0.9);
-  border: 1px solid var(--veiled-gray);
-  padding: 1.5rem;
-  border-radius: 4px;
-  position: relative;
-  overflow-x: hidden;
-
-  /* transform-style: preserve-3d; */
-  transition: transform 0.3s ease;
 }
 
 .message-card-header {
@@ -154,42 +140,95 @@ h1 {
   opacity: 1;
 }
 
-.message-text,
-.message-info-text {
+/* Update message container and cards */
+.message-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+  animation: fadeIn 0.8s ease-out;
+}
+
+.message-card {
+  background: rgba(30, 30, 30, 0.95);
+  border: 1px solid var(--mystery-green);
+  padding: 1rem 2rem;
+  border-radius: 4px;
+  position: relative;
+
+  animation: cardAppear 0.8s ease-out;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+@keyframes cardAppear {
+  from {
+    opacity: 0;
+    transform: translateY(20px) rotateX(15deg);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) rotateX(0);
+  }
+}
+
+.message-card:hover {
+  transform: translateY(-5px) rotateX(5deg) rotateY(-2deg);
+  box-shadow: 4px 4px 12px var(--shadow-color);
+}
+
+.message-info-text,/* Message text styling */
+.message-text {
+  font-size: 1.1rem;
   line-height: 1.6;
-  margin-bottom: 2rem;
-  padding: 0 1rem;
+  margin: 1.5rem 0;
   position: relative;
   text-align: center;
-  text-wrap: balance;
-  word-break: break-word;
-  hyphens: auto;
+  font-style: italic;
+}
+
+.message-text::before,
+.message-text::after {
+  color: var(--mystery-green);
+  font-size: 2.5rem;
+  font-family: serif;
+  position: absolute;
+  opacity: 0.5;
 }
 
 .message-text::before {
   content: "“";
-  position: absolute;
-  left: -0.5rem;
-  top: -0.5rem;
-  color: var(--mystery-green);
-  font-size: 2rem;
-  font-family: serif;
+  left: -1rem;
+  top: -2rem;
 }
 
 .message-text::after {
   content: "”";
-  position: absolute;
-  right: -0.5rem;
-  bottom: -1.5rem;
+  right: -1rem;
+  bottom: 0rem;
+}
+
+/* User and date styling */
+.message-user {
   color: var(--mystery-green);
-  font-size: 2rem;
-  font-family: serif;
+  font-size: 0.95rem;
+  text-align: right;
+  margin: 1.5rem 0;
+}
+
+.message-user::before {
+  content: "~";
+  margin-right: 0.5rem;
+  opacity: 0.7;
 }
 
 .message-date {
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   color: var(--veiled-gray);
-  text-align: center;
+  text-align: right;
+  border-top: 1px solid var(--veiled-gray);
+  padding-top: 1rem;
+  margin-top: 1.5rem;
 }
 
 /* details[open] {
@@ -231,7 +270,7 @@ details[open] summary::after {
 /* Add to existing styles */
 
 .form-page main {
-  max-width: 600px;
+  min-width: 600px;
   padding: 2rem 1rem;
 }
 
@@ -243,6 +282,8 @@ h1 {
   background: rgba(30, 30, 30, 0.9);
   border: 1px solid var(--veiled-gray);
   padding: 2rem;
+  margin-bottom: 2rem;
+  min-width: 100%;
   border-radius: 4px;
   position: relative;
   overflow: hidden;
@@ -319,7 +360,7 @@ button[type="submit"]:hover {
 .back-button {
   display: inline-flex;
   align-items: center;
-  margin-top: 2rem;
+  margin-bottom: 2rem;
   color: var(--mystery-green);
   text-decoration: none;
   padding: 0.5rem 1rem;
@@ -364,7 +405,7 @@ button[type="submit"]:hover {
 /* Add to existing styles */
 
 .message-info-container {
-  max-width: 600px;
+  min-width: 600px;
   margin: 2rem auto;
   position: relative;
   perspective: 1000px;
@@ -449,7 +490,7 @@ button[type="submit"]:hover {
 .back-button {
   display: inline-flex;
   align-items: center;
-  margin: 2rem auto;
+  margin-bottom: 2rem;
   padding: 0.8rem 1.5rem;
   background: rgba(42, 77, 58, 0.1);
   border: 1px solid var(--mystery-green);
@@ -466,7 +507,7 @@ button[type="submit"]:hover {
 /* Add to existing styles */
 
 .search-results-container {
-  max-width: 800px;
+  min-width: 100%;
   margin: 2rem auto;
   animation: fadeIn 0.8s ease-out;
 }
@@ -479,7 +520,7 @@ button[type="submit"]:hover {
 
 .results-list {
   display: grid;
-  gap: 1.5rem;
+  gap: 1rem;
   list-style: none;
   padding: 0;
 }
@@ -612,14 +653,14 @@ footer {
   }
 }
 
-.footer-container:hover {
+/* .footer-container:hover {
   color: var(--mystery-green);
   border-top-color: var(--parchment);
-}
+} */
 
-.footer-container:hover::before {
+/* .footer-container:hover::before {
   animation-duration: 4s;
-}
+} */
 
 @media (max-width: 600px) {
   .footer-container {
