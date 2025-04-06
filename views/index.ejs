@@ -49,7 +49,7 @@
         <% if (locals.messages) {%> <% messages.forEach(message => {%>
         <div class="message-card">
           <div class="message-card-header">
-            <span class="message-user">«<%= message.messageUser %>»</span>
+            <p class="message-user">«<%= message.messageUser %>»</p>
             <a href="/<%= message.id %>" class="view-button">
               <span class="material-symbols-outlined"> visibility </span>
             </a>
