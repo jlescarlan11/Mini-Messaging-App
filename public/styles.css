@@ -95,15 +95,27 @@ h1 {
 }
 
 .add-entry {
-  display: inline-flex;
-  align-items: center;
-  padding: 0.8rem 1.5rem;
   background: var(--mystery-green);
+  /* display: flex; */
+  /* align-items: center; */
+  vertical-align: middle;
+  align-items: flex-start;
+  padding: 0.8rem 1.5rem;
   color: var(--parchment);
   border: 1px solid #3a5d4a;
   border-radius: 4px;
   text-decoration: none;
+  font-size: 1rem;
+  position: relative;
+  padding-left: 2.5rem;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.add-entry::before {
+  content: "+";
+  position: absolute;
+  left: 1rem;
+  font-size: 1rem;
 }
 
 .add-entry:hover {
@@ -119,6 +131,7 @@ h1 {
 .message-card-header {
   display: flex;
   justify-content: space-between;
+  /* background-color: red; */
   align-items: center;
   margin-bottom: 1rem;
 }
@@ -126,7 +139,7 @@ h1 {
 .message-user {
   color: var(--parchment);
   font-style: italic;
-  font-size: 0.9rem;
+  font-size: 1rem;
   text-shadow: 1px 1px 2px var(--shadow-color);
 }
 
@@ -200,27 +213,13 @@ h1 {
 .message-text::before {
   content: "“";
   left: -1rem;
-  top: -2rem;
+  top: 1rem;
 }
 
 .message-text::after {
   content: "”";
   right: -1rem;
-  bottom: -1.5rem;
-}
-
-/* User and date styling */
-.message-user {
-  color: var(--parchment);
-  font-size: 0.95rem;
-  text-align: right;
-  margin: 1.5rem 0;
-}
-
-.message-user::before {
-  content: "~";
-  margin-right: 0.5rem;
-  opacity: 0.7;
+  bottom: 1rem;
 }
 
 .message-date {
@@ -251,6 +250,7 @@ summary::after {
   position: absolute;
   right: 1rem;
   top: 25%;
+  font-size: 1.5rem;
   transition: transform 0.3s ease;
 }
 
@@ -455,27 +455,13 @@ button[type="submit"]:hover {
 .message-info-text::before {
   content: "“";
   left: -1rem;
-  top: -1rem;
+  top: 1rem;
 }
 
 .message-info-text::after {
   content: "”";
   right: -1rem;
-  bottom: -1rem;
-}
-
-.message-user {
-  color: var(--parchment);
-  font-size: 1.1rem;
-  margin: 1.5rem 0;
-  text-align: right;
-  position: relative;
-}
-
-.message-user::before {
-  content: "~";
-  margin-right: 0.5rem;
-  opacity: 0.7;
+  bottom: 1rem;
 }
 
 .container p:last-child {
