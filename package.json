@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "start": "node app.js"
+    "start": "node db/populatedb.js"
   },
   "dependencies": {
     "dotenv": "^16.4.7",
