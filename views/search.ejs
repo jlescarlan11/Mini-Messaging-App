@@ -1,0 +1,37 @@
+<!-- views/search.ejs -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Search Results</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+    />
+  </head>
+  <body>
+    <main class="search-results-container">
+      <h1 aria-label="Shadowed whispers found">Search Results</h1>
+      <% if (messages.length > 0) { %>
+      <ul class="results-list">
+        <% messages.slice().reverse().forEach((message, index) => { %>
+        <li class="result-item" style="--index: <%= index %>">
+          <p class="message-info-text"><%= message.messageText %></p>
+          <p class="message-user"><%= message.messageUser %></p>
+          <time aria-label="Shadowed timestamp"><%= message.added %></time>
+        </li>
+        <% }) %>
+      </ul>
+      <% } else { %>
+      <div class="no-results" aria-label="Silent shadows">
+        <p>No whispers found in the darkness...</p>
+      </div>
+      <% } %>
+      <a href="/" class="search-back-link" aria-label="Return to shadow wall">
+        <span class="material-symbols-outlined">arrow_back</span>
+        Back to the Home
+      </a>
+    </main>
+    <%- include('footer') %>
+  </body>
+</html>

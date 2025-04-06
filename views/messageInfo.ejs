@@ -9,12 +9,16 @@
   </head>
   <body>
     <main>
-      <div class="container">
+      <div class="container" aria-label="Whisper revelation container">
         <div class="message-info-container">
           <div class="message-info-card">
-            <p class="message-info-text">"<%= message.text %>"</p>
-            <p class="message-user">- <%= message.user %></p>
-            <p>Entry Submitted At: <%=message.added%></p>
+            <p class="message-info-text"><%= message.messageText %></p>
+            <p class="message-user" aria-label="Veiled author">
+              <%= message.messageUser %>
+            </p>
+            <p aria-label="Shadowed timestamp">
+              Entry Submitted At: <%=message.added%>
+            </p>
           </div>
         </div>
         <a href="/" class="back-button"

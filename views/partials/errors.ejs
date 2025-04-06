@@ -1,0 +1,9 @@
+<% if (locals.errors) {%>
+<div class="error-container" aria-label="Whisper warnings">
+  <ul class="error-list">
+    <% errors.forEach(function(error) {%>
+    <li class="error-item" aria-label="Shadowed error"><%= error.msg %></li>
+    <% }); %>
+  </ul>
+</div>
+<% } %>
