@@ -124,7 +124,7 @@ h1 {
 }
 
 .message-user {
-  color: var(--mystery-green);
+  color: var(--parchment);
   font-style: italic;
   font-size: 0.9rem;
   text-shadow: 1px 1px 2px var(--shadow-color);
@@ -190,7 +190,7 @@ h1 {
 
 .message-text::before,
 .message-text::after {
-  color: var(--mystery-green);
+  color: var(--parchment);
   font-size: 2.5rem;
   font-family: serif;
   position: absolute;
@@ -211,7 +211,7 @@ h1 {
 
 /* User and date styling */
 .message-user {
-  color: var(--mystery-green);
+  color: var(--parchment);
   font-size: 0.95rem;
   text-align: right;
   margin: 1.5rem 0;
@@ -445,7 +445,7 @@ button[type="submit"]:hover {
 
 .message-info-text::before,
 .message-info-text::after {
-  color: var(--mystery-green);
+  color: var(--parchment);
   font-size: 3rem;
   font-family: serif;
   position: absolute;
@@ -465,7 +465,7 @@ button[type="submit"]:hover {
 }
 
 .message-user {
-  color: var(--mystery-green);
+  color: var(--parchment);
   font-size: 1.1rem;
   margin: 1.5rem 0;
   text-align: right;
