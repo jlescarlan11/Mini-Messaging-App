@@ -96,13 +96,17 @@ exports.messagesSearchGet = async (req, res, next) => {
       if (messageText) {
         match =
           match &&
-          message.messageText.toLowerCase().includes(messageText.toLowerCase());
+          message.messageText
+            .toLowerCase()
+            .includes(messageText.trim().toLowerCase());
       }
 
       if (messageUser) {
         match =
           match &&
-          message.messageUser.toLowerCase().includes(messageUser.toLowerCase());
+          message.messageUser
+            .toLowerCase()
+            .includes(messageUser.trim().toLowerCase());
       }
 
       if (added) {
