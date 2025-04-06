@@ -26,7 +26,6 @@ body {
 }
 
 main {
-  margin: 0 auto;
   padding: 2rem;
   min-width: 80%;
   animation: fadeIn 1s ease-in;
@@ -251,20 +250,9 @@ details[open] summary::after {
   transform: rotate(90deg);
 }
 
-@media (max-width: 600px) {
-  main {
-    padding: 1rem;
-  }
-
-  .message-container {
-    grid-template-columns: 1fr;
-  }
-}
-
 /* Add to existing styles */
 
 .form-page main {
-  min-width: 600px;
   padding: 2rem 1rem;
 }
 
@@ -509,6 +497,7 @@ button[type="submit"]:hover {
   background: rgba(30, 30, 30, 0.9);
   border: 1px solid var(--veiled-gray);
   padding: 1.5rem;
+  margin-bottom: 2rem;
   border-radius: 4px;
   position: relative;
   transition: transform 0.3s ease;
@@ -564,7 +553,6 @@ button[type="submit"]:hover {
 }
 
 .search-back-link {
-  display: inline-flex;
   align-items: center;
   margin-top: 2rem;
   padding: 0.8rem 1.5rem;
@@ -641,13 +629,6 @@ footer {
 /* .footer-container:hover::before {
   animation-duration: 4s;
 } */
-
-@media (max-width: 600px) {
-  .footer-container {
-    padding: 1rem;
-    font-size: 0.8rem;
-  }
-}
 
 /* Add to existing styles */
 .error-container {
@@ -729,15 +710,4 @@ footer {
 .error-item:hover {
   transform: translateX(5px);
   background: rgba(50, 20, 20, 0.4);
-}
-
-@media (max-width: 600px) {
-  .error-container {
-    padding: 1rem;
-    margin: 1rem 0;
-  }
-
-  .error-item {
-    font-size: 0.85rem;
-  }
 }
