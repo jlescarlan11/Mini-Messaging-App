@@ -236,7 +236,7 @@ summary {
 }
 
 summary::after {
-  content: "🔍";
+  content: "✖️";
   position: absolute;
   right: 1rem;
   top: 25%;
@@ -245,7 +245,7 @@ summary::after {
 }
 
 details[open] summary::after {
-  transform: rotate(90deg);
+  content: "➕";
 }
 
 /* Add to existing styles */
